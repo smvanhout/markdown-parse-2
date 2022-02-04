@@ -21,7 +21,12 @@ public class MarkdownParse {
                 currentIndex = closeParen + 1;
                 continue;
             }
-            toReturn.add(markdown.substring(openParen + 1, closeParen));
+            String subStr_to_add = markdown.substring(openParen + 1, closeParen);
+            if(subStr_to_add.length() > 1){
+                toReturn.add(subStr_to_add);
+            }
+
+            //toReturn.add(markdown.substring(openParen + 1, closeParen));
             currentIndex = closeParen + 1;
         }
         return toReturn;
