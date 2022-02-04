@@ -94,8 +94,4 @@ public class MarkdownParseTest {
         testFile("test-file.md", expectedOutput);
     }
     
-    @Test
-    public void failTest(){
-        assertTrue(false);
-    }
 }
