@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.*;
 import static org.junit.Assert.*;
 import org.junit.*;
 
@@ -92,6 +93,12 @@ public class MarkdownParseTest {
     public void testTestFile8() {
         String[] expectedOutput = {};
         testFile("test-file.md", expectedOutput);
+    }
+    @Test
+    public void linkAfterOpenParen() throws IOException{
+        String fileStr = Files.readString(Path.of("/Users/sebastiaan/Documents/GitHub/markdown-parse-2/testfiles/test-file9.md"));
+        List<String> testList = List.of("https://something.com");
+        assertEquals(MarkdownParse.getLinks(fileStr), testList);
     }
     
 }
