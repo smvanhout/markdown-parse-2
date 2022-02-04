@@ -12,7 +12,8 @@ public class MarkdownParseTest {
 
     public void testFile(String filename, String[] expectedOutput) {
         String absolute_path = BASE_FILE_PATH + "/" + filename;
-        Path filePath = Path.of(absolute_path);
+        // Use this for local runs: "Path filePath = Path.of(absolute_path);"
+        Path filePath = Path.of("testfiles/" + filename);
         try {
             String contents = Files.readString(filePath);
             ArrayList<String> links = MarkdownParse.getLinks(contents);
