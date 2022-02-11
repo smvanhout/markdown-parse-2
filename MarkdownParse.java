@@ -11,7 +11,7 @@ public class MarkdownParse {
         // the next )
 
         int currentIndex = 0;
-
+        int randomVar = 0;
         while(shouldContinueSearching(markdown, currentIndex)) {
             int nextOpenBracket = markdown.indexOf("[", currentIndex);
             int nextCloseBracket = markdown.indexOf("]", nextOpenBracket);
