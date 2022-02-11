@@ -93,11 +93,6 @@ public class MarkdownParseTest {
         String[] expectedOutput = {};
         testFile("test-file.md", expectedOutput);
     }
-    @Test
-    public void linkAfterOpenParen() throws IOException{
-        String fileStr = Files.readString(Path.of("/Users/sebastiaan/Documents/GitHub/markdown-parse-2/testfiles/test-file9.md"));
-        List<String> testList = List.of("https://something.com");
-        assertEquals(MarkdownParse.getLinks(fileStr), testList);
-    }
+
     
 }
