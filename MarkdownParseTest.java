@@ -10,7 +10,6 @@ import org.junit.*;
 public class MarkdownParseTest {
     final String BASE_FILE_PATH = "/Users/sebastiaan/Documents/GitHub/markdown-parse-2/testfiles";
     
-    int randomVar = 1;
     public void testFile(String filename, String[] expectedOutput) {
         String absolute_path = BASE_FILE_PATH + "/" + filename;
         // Use this for local runs: "Path filePath = Path.of(absolute_path);"
